@@ -16,4 +16,4 @@ jobs:
     - name: Install dependecies
       run: pip install datetime
     - name: Run script
-      run: python helloworld.py
+      run: python /main/helloworld.py
