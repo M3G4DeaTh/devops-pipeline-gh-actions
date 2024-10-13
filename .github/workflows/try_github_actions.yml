@@ -1,0 +1,13 @@
+name: Example with github actions
+
+on:
+  workflow_dispach:
+
+jobs:
+  initial_action_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello world
+        run: echo "Hello World"
+      - name: Print good bye
+        run: echo "Good bye"
