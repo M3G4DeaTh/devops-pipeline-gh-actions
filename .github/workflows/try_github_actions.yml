@@ -1,13 +1,19 @@
 name: Example with github actions
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ main ]
 
 jobs:
   initial_action_job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print hello world
-        run: echo "Hello World"
-      - name: Print good bye
-        run: echo "Good bye"
+    - uses: actions/checkout@v4
+    - name: Use python
+      uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+    - name: Install dependecies
+      run: pip install datetime
+    - name: Run script
+      run: python helloworld.py
