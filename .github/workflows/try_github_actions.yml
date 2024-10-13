@@ -1,10 +1,10 @@
 name: Example with github actions
 
 on:
-  workflow_dispach:
+  workflow_dispatch:
 
 jobs:
-  initial_action_job:
+  initial_action_job:s
     runs-on: ubuntu-latest
     steps:
       - name: Print hello world
